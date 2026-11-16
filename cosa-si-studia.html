@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosa si Studia | Informatica e Telecomunicazioni - I.T. Dalla Chiesa</title>
+  <meta name="description" content="Scopri il quadro orario dal 1° al 5° anno e prova i mini-laboratori interattivi di Programmazione, Cybersecurity e Intelligenza Artificiale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR STICKY CONDIVISA -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Homepage IT Dalla Chiesa Partinico">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="38" height="38" rx="10" fill="#111927" stroke="#00f5d4" stroke-width="2"/>
+          <path d="M14 15L9 21L14 27" stroke="#00f5d4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 15L33 21L28 27" stroke="#00ff88" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23 13L19 29" stroke="#9b5de5" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">I.T. Dalla Chiesa</span>
+          <span class="nav-brand-sub">Informatica &amp; Telecomunicazioni</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Menu principale">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cosa-si-studia.html" class="nav-link active">Cosa si studia</a>
+        <a href="laboratori.html" class="nav-link">Laboratori</a>
+        <a href="dopo-il-diploma.html" class="nav-link">Dopo il diploma</a>
+        <a href="challenge.html" class="nav-link nav-link-challenge">⚡ Cyber Challenge</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER INTESTAZIONE DINAMICO -->
+    <section class="page-banner">
+      <div class="dynamic-bg" aria-hidden="true">
+        <div class="cyber-grid"></div>
+        <div class="glow-orb orb-cyan"></div>
+        <div class="glow-orb orb-purple"></div>
+      </div>
+
+      <div class="container page-banner-content">
+        <span class="section-badge">// Piano di Studi &amp; Demo Live</span>
+        <h1 class="section-title">Cosa si studia in <span class="gradient-text">Informatica &amp; Telecomunicazioni</span></h1>
+        <p class="section-subtitle" style="max-width:720px;margin:0 auto;">
+          Un percorso in 5 anni che unisce cultura scientifica, lingue e tantissime ore di laboratorio pratico affiancati dai docenti tecnico-pratici (ITP).
+        </p>
+      </div>
+
+      <svg class="banner-wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,22 C360,48 1080,-4 1440,24 L1440,44 L0,44 Z" fill="#0a0e17"/>
+      </svg>
+    </section>
+
+    <!-- SEZIONE 1: QUADRO ORARIO INTERATTIVO 1° - 5° ANNO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">// Quadro Orario Ministeriale</span>
+          <h2 class="section-title">Le Materie dal 1° al 5° Anno</h2>
+          <p class="section-subtitle">
+            Clicca su un anno per scoprire tutte le materie e quante ore settimanali passerai direttamente in laboratorio.
+          </p>
+        </div>
+
+        <div class="tabs-bar" role="tablist" aria-label="Selettore anno scolastico">
+          <button class="tab-btn active" data-year-tab="1" role="tab">1° Anno (33h)</button>
+          <button class="tab-btn" data-year-tab="2" role="tab">2° Anno (32h)</button>
+          <button class="tab-btn" data-year-tab="3" role="tab">3° Anno (32h)</button>
+          <button class="tab-btn" data-year-tab="4" role="tab">4° Anno (32h)</button>
+          <button class="tab-btn" data-year-tab="5" role="tab">5° Anno (32h)</button>
+          <button class="tab-btn" data-year-tab="all" role="tab">📋 Vista Completa</button>
+        </div>
+
+        <!-- Contenitore popolato dinamicamente da script.js -->
+        <div id="curriculumOutput"></div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 2: 3 AREE DI APPROFONDIMENTO CON MINI-GIOCHI INTERATTIVI -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">// Prova subito in diretta</span>
+          <h2 class="section-title">Esplora e Gioca con le Materie Tech</h2>
+          <p class="section-subtitle">
+            Non solo teoria: sperimenta subito tre mini-simulazioni interattive di Programmazione, Cybersecurity e Intelligenza Artificiale!
+          </p>
+        </div>
+
+        <!-- MINI-LAB 1: PROGRAMMAZIONE -->
+        <article class="interactive-lab-box">
+          <div class="lab-split">
+            <div>
+              <span class="section-badge" style="color:var(--neon-cyan);">01 // Sviluppo Software</span>
+              <h3 style="font-size:1.55rem;margin-bottom:0.75rem;">Programmazione &amp; Coding</h3>
+              <p style="color:var(--text-secondary);margin-bottom:1.1rem;">
+                Impari a ragionare per algoritmi e a scrivere programmi veri in più linguaggi, fino a realizzare app, siti web e database completi.
+              </p>
+              <div class="pill-list" style="margin-bottom:1.25rem;">
+                <span class="pill">Algoritmi &amp; Flowchart</span>
+                <span class="pill">Python</span>
+                <span class="pill">C / C++</span>
+                <span class="pill">Java</span>
+                <span class="pill">Web HTML / CSS / JS</span>
+                <span class="pill">Database SQL</span>
+              </div>
+              <pre class="code-snippet" id="liveCodePreview"></pre>
+            </div>
+
+            <div class="demo-widget">
+              <h4 style="margin-bottom:0.9rem;color:var(--neon-green);">🚀 Mini-Editor: Configura e Lancia il Razzo</h4>
+              <div class="grid-2" style="gap:0.85rem;">
+                <div class="control-group">
+                  <label for="rocketColor">Colore Scafo</label>
+                  <select id="rocketColor" class="cyber-select">
+                    <option value="#00f5d4">Ciano Elettrico</option>
+                    <option value="#00ff88">Verde Matrix</option>
+                    <option value="#9b5de5">Viola Tech</option>
+                    <option value="#ffbe0b">Oro Solare</option>
+                  </select>
+                </div>
+                <div class="control-group">
+                  <label for="rocketSpeed">Potenza Motori</label>
+                  <select id="rocketSpeed" class="cyber-select">
+                    <option value="lenta">Crociera (Lenta)</option>
+                    <option value="media" selected>Orbita (Media)</option>
+                    <option value="turbo">Iper-Spazio (Turbo)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="rocketMessage">Nome Missione sul Razzo</label>
+                <input type="text" id="rocketMessage" class="cyber-input" maxlength="22" value="Dalla Chiesa 1" placeholder="Scrivi il nome della missione...">
+              </div>
+
+              <button id="runRocketCode" class="btn btn-primary btn-sm" style="width:100%;">▶ Esegui Codice</button>
+
+              <div class="rocket-stage">
+                <div class="rocket-actor" id="rocketActor">
+                  <svg width="56" height="68" viewBox="0 0 64 78" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path id="rocketBodyShape" d="M32 4C22 16 18 32 18 48H46C46 32 42 16 32 4Z" fill="#00f5d4"/>
+                    <path d="M18 38L8 52H18V38Z" fill="#9b5de5"/>
+                    <path d="M46 38L56 52H46V38Z" fill="#9b5de5"/>
+                    <circle cx="32" cy="28" r="6" fill="#0a0e17" stroke="#ffffff" stroke-width="2"/>
+                    <path d="M25 50L32 68L39 50H25Z" fill="#ffbe0b"/>
+                  </svg>
+                  <span class="rocket-label" id="rocketLabel">Dalla Chiesa 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MINI-LAB 2: CYBERSECURITY & RETI -->
+        <article class="interactive-lab-box" style="border-color:rgba(0,255,136,0.35);">
+          <div class="lab-split">
+            <div>
+              <span class="section-badge" style="color:var(--neon-green);background:var(--neon-green-dim);border-color:rgba(0,255,136,0.35);">02 // Difesa Digitale</span>
+              <h3 style="font-size:1.55rem;margin-bottom:0.75rem;">Cybersecurity &amp; Reti</h3>
+              <p style="color:var(--text-secondary);margin-bottom:1.1rem;">
+                Capisci come comunicano i computer tra loro e come proteggere dati, reti aziendali e profili personali dagli attacchi informatici.
+              </p>
+              <div class="pill-list">
+                <span class="pill">Indirizzi IP &amp; Subnet</span>
+                <span class="pill">Crittografia</span>
+                <span class="pill">Firewall &amp; VPN</span>
+                <span class="pill">Sicurezza Password</span>
+                <span class="pill">Difesa dagli Attacchi</span>
+              </div>
+            </div>
+
+            <div class="demo-widget">
+              <h4 style="margin-bottom:0.75rem;color:var(--neon-cyan);">🛡️ Password Strength &amp; Hacker Simulator</h4>
+              <div class="control-group">
+                <label for="pwdSimInput">Inventa una password di prova (non usare la tua vera!)</label>
+                <input type="text" id="pwdSimInput" class="cyber-input" placeholder="Es. ciao123 oppure Partinico#2026!">
+              </div>
+
+              <div class="strength-meter" aria-hidden="true">
+                <div class="strength-fill" id="pwdStrengthFill"></div>
+              </div>
+
+              <p style="font-family:var(--font-mono);font-size:0.9rem;margin-bottom:0.45rem;">
+                Tempo stimato per craccarla: <strong id="pwdCrackTime" style="color:var(--neon-cyan);">In attesa di input...</strong>
+              </p>
+              <p id="pwdHackerTip" style="font-size:0.86rem;color:var(--text-secondary);">
+                Scrivi una password inventata per vedere come reagisce un simulatore di attacco brute-force.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- MINI-LAB 3: INTELLIGENZA ARTIFICIALE -->
+        <article class="interactive-lab-box" style="border-color:rgba(155,93,229,0.45);margin-bottom:0;">
+          <div class="lab-split">
+            <div>
+              <span class="section-badge" style="color:#d8bfff;background:var(--neon-purple-dim);border-color:rgba(155,93,229,0.4);">03 // Futuro Intelligente</span>
+              <h3 style="font-size:1.55rem;margin-bottom:0.75rem;">Intelligenza Artificiale</h3>
+              <p style="color:var(--text-secondary);margin-bottom:1.1rem;">
+                L'IA non è magia: è matematica, dati e addestramento. Scopri come un modello impara dagli esempi per riconoscere schemi e prendere decisioni.
+              </p>
+              <div class="pill-list">
+                <span class="pill">Machine Learning</span>
+                <span class="pill">Reti Neurali</span>
+                <span class="pill">Prompt Engineering</span>
+                <span class="pill">Visione Artificiale</span>
+                <span class="pill">Etica dell'IA</span>
+              </div>
+            </div>
+
+            <div class="demo-widget">
+              <h4 style="margin-bottom:0.45rem;color:#d8bfff;">🤖 Mini-Lab: Addestra il Bot Anti-Phishing</h4>
+              <p style="font-size:0.84rem;color:var(--text-secondary);margin-bottom:0.85rem;">
+                <strong>Step 1:</strong> Clicca sui 4 esempi qui sotto per insegnare al bot la differenza tra messaggi veri e truffe:
+              </p>
+
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.55rem;margin-bottom:0.9rem;">
+                <button type="button" class="tab-btn" style="font-size:0.76rem;text-align:left;" data-train-sample="1">
+                  🚨 "Hai vinto un iPhone gratis! Clicca qui ora" → <strong>Spam</strong>
+                </button>
+                <button type="button" class="tab-btn" style="font-size:0.76rem;text-align:left;" data-train-sample="2">
+                  ✅ "Ciao, domani porti il quaderno di mate?" → <strong>Sicuro</strong>
+                </button>
+                <button type="button" class="tab-btn" style="font-size:0.76rem;text-align:left;" data-train-sample="3">
+                  🚨 "Account bloccato! Inserisci subito la password" → <strong>Spam</strong>
+                </button>
+                <button type="button" class="tab-btn" style="font-size:0.76rem;text-align:left;" data-train-sample="4">
+                  ✅ "Ci vediamo alle 16 in laboratorio per il progetto" → <strong>Sicuro</strong>
+                </button>
+              </div>
+
+              <p id="aiTrainStatus" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--neon-cyan);margin-bottom:0.85rem;">
+                Addestramento modello: <strong>0/4 esempi (0%)</strong>
+              </p>
+
+              <p style="font-size:0.84rem;color:var(--text-secondary);margin-bottom:0.55rem;">
+                <strong>Step 2:</strong> Testa il bot su un messaggio nuovo mai visto prima:
+              </p>
+              <div style="display:flex;flex-wrap:wrap;gap:0.55rem;margin-bottom:0.85rem;">
+                <button type="button" class="btn btn-secondary btn-sm" data-test-sample="A" data-expected="phishing">
+                  Test A: "Regalo 500€ gratis, clicca subito!"
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm" data-test-sample="B" data-expected="safe">
+                  Test B: "Ottimo lavoro con il robot mBot2 oggi!"
+                </button>
+              </div>
+
+              <div id="aiTestResult" style="font-size:0.86rem;background:#121826;padding:0.75rem;border-radius:8px;border:1px solid var(--border-subtle);">
+                Addestra il bot e poi premi un pulsante di test per vedere la previsione dell'IA.
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER CONDIVISO -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns: 1.3fr 0.9fr 1.1fr 0.85fr;">
+        <div>
+          <h3 class="footer-title">I.T. "Carlo Alberto Dalla Chiesa"</h3>
+          <p class="footer-desc">
+            Indirizzo Tecnico Tecnologico — <strong>Informatica e Telecomunicazioni</strong>.<br>
+            Partinico (PA) • Formiamo i progettisti, gli sviluppatori e gli innovatori digitali di domani.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Esplora il Sito</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="cosa-si-studia.html">Quadro Orario e Materie</a></li>
+            <li><a href="laboratori.html">Laboratori e Progetti</a></li>
+            <li><a href="dopo-il-diploma.html">Università e Lavoro</a></li>
+            
+            <li><a href="challenge.html">Cyber Challenge</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Canali Ufficiali Scuola</h4>
+          <div class="social-links">
+            <a href="https://www.itdallachiesa.it/index-2.html" class="social-pill" target="_blank" rel="noopener noreferrer">🌐 Sito Ufficiale</a>
+            <a href="https://www.facebook.com/ItCarloAlbertoDallaChiesaPartinico/?locale=it_IT" class="social-pill" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+            <a href="https://www.instagram.com/it.dallachiesa/" class="social-pill" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+            <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2F%40itdallachiesapartinico%2Fvideo%2F7548512214399847702&lang=en&enter_method=mandatory" class="social-pill" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+            <a href="https://www.youtube.com/channel/UC1bS_AZvCFSDUAT5_xX4-SQ" class="social-pill" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <h4 class="footer-title">Apri sul tuo Smartphone</h4>
+          <div style="background:#ffffff;padding:8px;border-radius:10px;display:inline-block;border:2px solid var(--neon-cyan);box-shadow:0 0 15px rgba(0,245,212,0.2);">
+            <img class="footer-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&margin=2&data=https%3A%2F%2Fwww.itdallachiesa.it%2Findex-2.html" alt="QR Code per aprire questa pagina su smartphone" width="112" height="112" style="display:block;">
+          </div>
+          <span style="display:block;font-family:var(--font-mono);font-size:0.72rem;color:var(--neon-cyan);margin-top:0.45rem;">Inquadra</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 I.T. "Carlo Alberto Dalla Chiesa" — Partinico (PA). Sito di Orientamento Scolastico.</span>
+        <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina">
+          <span>↑ Torna in cima</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>

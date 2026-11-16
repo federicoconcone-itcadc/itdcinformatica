@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dopo il Diploma | Università e Lavoro - I.T. Dalla Chiesa</title>
+  <meta name="description" content="Scopri cosa puoi fare dopo il diploma in Informatica e Telecomunicazioni all'IT Dalla Chiesa di Partinico: tutte le facoltà universitarie, i lavori più richiesti e il glossario tech.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR STICKY CONDIVISA -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Homepage IT Dalla Chiesa Partinico">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="38" height="38" rx="10" fill="#111927" stroke="#00f5d4" stroke-width="2"/>
+          <path d="M14 15L9 21L14 27" stroke="#00f5d4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 15L33 21L28 27" stroke="#00ff88" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23 13L19 29" stroke="#9b5de5" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">I.T. Dalla Chiesa</span>
+          <span class="nav-brand-sub">Informatica &amp; Telecomunicazioni</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Menu principale">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cosa-si-studia.html" class="nav-link">Cosa si studia</a>
+        <a href="laboratori.html" class="nav-link">Laboratori</a>
+        <a href="dopo-il-diploma.html" class="nav-link active">Dopo il diploma</a>
+        <a href="challenge.html" class="nav-link nav-link-challenge">⚡ Cyber Challenge</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER INTESTAZIONE DINAMICO -->
+    <section class="page-banner">
+      <div class="dynamic-bg" aria-hidden="true">
+        <div class="cyber-grid"></div>
+        <div class="glow-orb orb-purple"></div>
+        <div class="glow-orb orb-cyan"></div>
+      </div>
+
+      <div class="container page-banner-content">
+        <span class="section-badge">// Orizzonti &amp; Carriera</span>
+        <h1 class="section-title">Cosa Puoi Fare <span class="gradient-text">Dopo il Diploma?</span></h1>
+        <p class="section-subtitle" style="max-width:740px;margin:0 auto;">
+          Con il diploma di Perito in Informatica e Telecomunicazioni non devi scegliere adesso una strada chiusa: a 19 anni avrai le porte aperte sia per l'Università sia per entrare subito nel mondo del lavoro.
+        </p>
+      </div>
+
+      <svg class="banner-wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,22 C360,48 1080,-4 1440,24 L1440,44 L0,44 Z" fill="#0a0e17"/>
+      </svg>
+    </section>
+
+    <!-- SEZIONE 1: SELETTORE INTERATTIVO DI INTERESSI + BIVIO UNIVERSITÀ VS LAVORO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">// Trova la tua strada</span>
+          <h2 class="section-title">Cosa ti appassiona di più?</h2>
+          <p class="section-subtitle">
+            Clicca su uno dei tuoi interessi qui sotto per illuminare i percorsi universitari e lavorativi più adatti a te! (Riclicca per mostrare di nuovo tutto).
+          </p>
+        </div>
+
+        <!-- Tag degli interessi cliccabili -->
+        <div class="interest-tags" role="group" aria-label="Filtra per interesse personale">
+          <button type="button" class="interest-chip" data-interest="videogiochi">🎮 Videogiochi</button>
+          <button type="button" class="interest-chip" data-interest="robot-ia">🤖 Robot e Intelligenza Artificiale</button>
+          <button type="button" class="interest-chip" data-interest="costruire">🔧 Costruire e smontare</button>
+          <button type="button" class="interest-chip" data-interest="spazio">🚀 Spazio e aerei</button>
+          <button type="button" class="interest-chip" data-interest="problemi">🧩 Risolvere problemi</button>
+          <button type="button" class="interest-chip" data-interest="creare">💡 Creare e inventare</button>
+        </div>
+
+        <!-- Bivio Interattivo Università vs Lavoro -->
+        <div class="pathway-switch" role="tablist" aria-label="Scegli percorso post-diploma">
+          <button type="button" class="pathway-btn active" data-pathway="universita" role="tab">
+            <h3>🎓 Percorso Università</h3>
+            <p>Continua a studiare e diventa Ingegnere, Ricercatore o Esperto Tech.</p>
+          </button>
+
+          <button type="button" class="pathway-btn" data-pathway="lavoro" role="tab">
+            <h3>💼 Percorso Lavoro</h3>
+            <p>Entra subito nel mondo del lavoro come tecnico specializzato e sviluppatore.</p>
+          </button>
+        </div>
+
+        <!-- PANNELLO 1: PERCORSO UNIVERSITÀ -->
+        <div id="panelUniversita">
+          <div class="card" style="margin-bottom:2rem;border-color:var(--border-neon);background:linear-gradient(145deg, rgba(0,245,212,0.08), var(--bg-card));">
+            <h3 style="color:var(--neon-cyan);margin-bottom:0.4rem;">💡 Sapevi che con il Diploma Tecnico puoi iscriverti a QUALSIASI Università?</h3>
+            <p style="color:var(--text-secondary);">
+              Il diploma dell'I.T. "Carlo Alberto Dalla Chiesa" ha lo stesso valore legale di qualsiasi liceo: dà accesso a tutte le facoltà universitarie (alcune prevedono un test d'ingresso), dandoti in più un enorme vantaggio pratico in matematica applicata, fisica, informatica ed elettronica!
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <!-- Card Uni 1 -->
+            <article class="card" data-tags="videogiochi,problemi,creare">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <h3>Ingegneria Informatica</h3>
+              <p>Crea programmi, app, videogiochi, piattaforme cloud e sistemi digitali complessi che milioni di persone usano ogni giorno.</p>
+              <div class="pill-list">
+                <span class="pill">Software</span>
+                <span class="pill">App &amp; Cloud</span>
+              </div>
+            </article>
+
+            <!-- Card Uni 2 -->
+            <article class="card" data-tags="robot-ia,problemi,creare">
+              <div class="card-icon purple">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
+                </svg>
+              </div>
+              <h3>Ingegneria dell'Intelligenza Artificiale</h3>
+              <p>Insegna ai computer a imparare dagli esempi, riconoscere immagini e voci, guidare veicoli autonomi e analizzare grandi moli di dati.</p>
+              <div class="pill-list">
+                <span class="pill">Machine Learning</span>
+                <span class="pill">Data Science</span>
+              </div>
+            </article>
+
+            <!-- Card Uni 3 -->
+            <article class="card" data-tags="robot-ia,costruire,creare">
+              <div class="card-icon green">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="8" width="16" height="12" rx="3"/>
+                  <path d="M12 2v6M9 13h.01M15 13h.01"/>
+                </svg>
+              </div>
+              <h3>Ingegneria Robotica</h3>
+              <p>Costruisce robot che si muovono, vedono e reagiscono all'ambiente: dai droni intelligenti ai bracci robotici per la medicina e l'industria.</p>
+              <div class="pill-list">
+                <span class="pill">Automazione</span>
+                <span class="pill">Droni &amp; Sensori</span>
+              </div>
+            </article>
+
+            <!-- Card Uni 4 -->
+            <article class="card" data-tags="spazio,costruire,problemi">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L19 21L12 17L5 21L12 2Z"/>
+                </svg>
+              </div>
+              <h3>Ingegneria Aerospaziale</h3>
+              <p>Progetta aerei, razzi spaziali, satelliti in orbita e i computer di bordo che li guidano nello spazio.</p>
+              <div class="pill-list">
+                <span class="pill">Satelliti</span>
+                <span class="pill">Aerei &amp; Razzi</span>
+              </div>
+            </article>
+
+            <!-- Card Uni 5 -->
+            <article class="card" data-tags="costruire,spazio,creare">
+              <div class="card-icon green">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 0 1 0 4h-.09c-.658.003-1.25.396-1.51 1z"/>
+                </svg>
+              </div>
+              <h3>Ingegneria Meccanica</h3>
+              <p>Progetta motori, auto da corsa, macchine industriali e ingranaggi di precisione usando simulatori 3D al computer.</p>
+              <div class="pill-list">
+                <span class="pill">Motori &amp; CAD 3D</span>
+                <span class="pill">Meccatronica</span>
+              </div>
+            </article>
+
+            <!-- Card Uni 6 -->
+            <article class="card" data-tags="problemi,creare">
+              <div class="card-icon purple">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 3v18h18"/>
+                  <path d="M18 17V9M13 17V5M8 17v-3"/>
+                </svg>
+              </div>
+              <h3>Ingegneria Gestionale</h3>
+              <p>Organizza grandi aziende, progetti tecnologici e produzione usando i dati, il software e la logica per far funzionare tutto al meglio.</p>
+              <div class="pill-list">
+                <span class="pill">Organizzazione</span>
+                <span class="pill">Tech &amp; Business</span>
+              </div>
+            </article>
+
+            <!-- Card Uni 7 -->
+            <article class="card" data-tags="costruire,spazio,robot-ia">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                  <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>
+                </svg>
+              </div>
+              <h3>Elettronica e Telecomunicazioni</h3>
+              <p>Progetta microchip, circuiti stampati, reti 5G/6G, Wi-Fi ad altissima velocità e sistemi di comunicazione globale.</p>
+              <div class="pill-list">
+                <span class="pill">Microchip</span>
+                <span class="pill">5G &amp; Segnali</span>
+              </div>
+            </article>
+
+            <!-- Card Uni 8 -->
+            <article class="card" style="grid-column:span 2;" data-tags="videogiochi,problemi,robot-ia,creare">
+              <div class="card-icon green">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+              </div>
+              <h3>Altri Percorsi Universitari &amp; ITS Academy</h3>
+              <p>
+                Puoi scegliere anche <strong>Informatica pura</strong>, <strong>Sicurezza Informatica (Cybersecurity)</strong>, <strong>Matematica</strong>, <strong>Fisica</strong> o <strong>Ingegneria Biomedica</strong> (tecnologie per la medicina). Oppure puoi frequentare un <strong>ITS Academy</strong>: corsi biennali super-pratici post-diploma realizzati insieme alle aziende tech!
+              </p>
+              <div class="pill-list">
+                <span class="pill">Informatica</span>
+                <span class="pill">Cybersecurity</span>
+                <span class="pill">Matematica &amp; Fisica</span>
+                <span class="pill">Biomedica</span>
+                <span class="pill">ITS Academy (2 anni)</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- PANNELLO 2: PERCORSO LAVORO -->
+        <div id="panelLavoro" style="display:none;">
+          <div class="card" style="margin-bottom:2rem;border-color:rgba(0,255,136,0.4);background:linear-gradient(145deg, rgba(0,255,136,0.08), var(--bg-card));">
+            <h3 style="color:var(--neon-green);margin-bottom:0.4rem;">💼 Subito pronto per le aziende tecnologiche!</h3>
+            <p style="color:var(--text-secondary);">
+              I diplomati in Informatica e Telecomunicazioni sono tra i profili più ricercati dalle aziende in Italia e all'estero. Ecco le figure professionali che puoi ricoprire già subito dopo il diploma:
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <!-- Lavoro 1 -->
+            <article class="card" data-tags="videogiochi,creare,problemi">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <h3>Sviluppatore Software / Web</h3>
+              <p><strong>Cosa fa ogni giorno:</strong> Scrive codice per creare siti web, app mobile, gestionali aziendali e piattaforme digitali lavorando in team con altri programmatori.</p>
+              <div class="pill-list">
+                <span class="pill">Web &amp; App</span>
+                <span class="pill">Coding</span>
+              </div>
+            </article>
+
+            <!-- Lavoro 2 -->
+            <article class="card" data-tags="problemi,costruire">
+              <div class="card-icon green">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2"/>
+                  <rect x="2" y="14" width="20" height="8" rx="2"/>
+                  <line x1="6" y1="6" x2="6.01" y2="6"/>
+                  <line x1="6" y1="18" x2="6.01" y2="18"/>
+                </svg>
+              </div>
+              <h3>Tecnico di Reti e Sistemista Junior</h3>
+              <p><strong>Cosa fa ogni giorno:</strong> Installa e configura server, reti Wi-Fi aziendali, router e sistemi cloud assicurandosi che tutto sia veloce e sempre connesso.</p>
+              <div class="pill-list">
+                <span class="pill">Server &amp; Cloud</span>
+                <span class="pill">Reti Cisco</span>
+              </div>
+            </article>
+
+            <!-- Lavoro 3 -->
+            <article class="card" data-tags="problemi,robot-ia">
+              <div class="card-icon purple">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3>Tecnico Cybersecurity</h3>
+              <p><strong>Cosa fa ogni giorno:</strong> Monitora le reti aziendali per bloccare virus, attacchi hacker e tentativi di phishing, aggiornando i firewall e proteggendo i dati.</p>
+              <div class="pill-list">
+                <span class="pill">Difesa Cyber</span>
+                <span class="pill">Sicurezza Dati</span>
+              </div>
+            </article>
+
+            <!-- Lavoro 5 -->
+            <article class="card" data-tags="problemi,costruire">
+              <div class="card-icon green">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <h3>IT Support Specialist</h3>
+              <p><strong>Cosa fa ogni giorno:</strong> Risolve problemi hardware e software in aziende, scuole o uffici, aiutando gli utenti e mantenendo efficienti tutti i dispositivi.</p>
+              <div class="pill-list">
+                <span class="pill">Problem Solving</span>
+                <span class="pill">Hardware &amp; OS</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 2: GLOSSARIO INTERATTIVO PER RAGAZZI -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">// Parole Chiave Spiegate Semplici</span>
+          <h2 class="section-title">Mini-Glossario del Futuro</h2>
+          <p class="section-subtitle">
+            Hai qualche dubbio sul significato di queste parole? Clicca su una parola per leggerla spiegata in modo chiaro e diretto.
+          </p>
+        </div>
+
+        <div class="glossary-box">
+          <div class="glossary-chips" role="group" aria-label="Termini del glossario">
+            <button type="button" class="interest-chip active" data-glossary="diploma">Diploma</button>
+            <button type="button" class="interest-chip" data-glossary="universita">Università</button>
+            <button type="button" class="interest-chip" data-glossary="ingegnere">Ingegnere</button>
+            <button type="button" class="interest-chip" data-glossary="programma">Programma (codice)</button>
+            <button type="button" class="interest-chip" data-glossary="dati">Dati</button>
+            <button type="button" class="interest-chip" data-glossary="rete">Rete</button>
+            <button type="button" class="interest-chip" data-glossary="ia">Intelligenza Artificiale</button>
+          </div>
+
+          <div class="glossary-answer">
+            <h3 id="glossaryTermTitle" style="color:var(--neon-cyan);margin-bottom:0.45rem;">Diploma</h3>
+            <p id="glossaryTermDesc" style="color:var(--text-primary);font-size:1.02rem;">
+              È il titolo di studio che ottieni dopo i 5 anni di scuola superiore superando l’Esame di Stato. Ti permette sia di lavorare subito come Perito Informatico sia di iscriverti a qualsiasi Università.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER CONDIVISO -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns: 1.3fr 0.9fr 1.1fr 0.85fr;">
+        <div>
+          <h3 class="footer-title">I.T. "Carlo Alberto Dalla Chiesa"</h3>
+          <p class="footer-desc">
+            Indirizzo Tecnico Tecnologico — <strong>Informatica e Telecomunicazioni</strong>.<br>
+            Partinico (PA) • Formiamo i progettisti, gli sviluppatori e gli innovatori digitali di domani.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Esplora il Sito</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="cosa-si-studia.html">Quadro Orario e Materie</a></li>
+            <li><a href="laboratori.html">Laboratori e Progetti</a></li>
+            <li><a href="dopo-il-diploma.html">Università e Lavoro</a></li>
+            
+            <li><a href="challenge.html">Cyber Challenge</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Canali Ufficiali Scuola</h4>
+          <div class="social-links">
+            <a href="https://www.itdallachiesa.it/index-2.html" class="social-pill" target="_blank" rel="noopener noreferrer">🌐 Sito Ufficiale</a>
+            <a href="https://www.facebook.com/ItCarloAlbertoDallaChiesaPartinico/?locale=it_IT" class="social-pill" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+            <a href="https://www.instagram.com/it.dallachiesa/" class="social-pill" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+            <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2F%40itdallachiesapartinico%2Fvideo%2F7548512214399847702&lang=en&enter_method=mandatory" class="social-pill" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+            <a href="https://www.youtube.com/channel/UC1bS_AZvCFSDUAT5_xX4-SQ" class="social-pill" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <h4 class="footer-title">Apri sul tuo Smartphone</h4>
+          <div style="background:#ffffff;padding:8px;border-radius:10px;display:inline-block;border:2px solid var(--neon-cyan);box-shadow:0 0 15px rgba(0,245,212,0.2);">
+            <img class="footer-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&margin=2&data=https%3A%2F%2Fwww.itdallachiesa.it%2Findex-2.html" alt="QR Code per aprire questa pagina su smartphone" width="112" height="112" style="display:block;">
+          </div>
+          <span style="display:block;font-family:var(--font-mono);font-size:0.72rem;color:var(--neon-cyan);margin-top:0.45rem;">Inquadra</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 I.T. "Carlo Alberto Dalla Chiesa" — Partinico (PA). Sito di Orientamento Scolastico.</span>
+        <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina">
+          <span>↑ Torna in cima</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>

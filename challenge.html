@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Challenge (4 Livelli) | I.T. Dalla Chiesa - Partinico</title>
+  <meta name="description" content="Mettiti alla prova con i 4 livelli della Cyber Challenge dell'IT Carlo Alberto Dalla Chiesa di Partinico: binario, porte logiche, cifrario di Cesare e reti.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR STICKY CONDIVISA -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Homepage IT Dalla Chiesa Partinico">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="38" height="38" rx="10" fill="#111927" stroke="#00f5d4" stroke-width="2"/>
+          <path d="M14 15L9 21L14 27" stroke="#00f5d4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 15L33 21L28 27" stroke="#00ff88" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23 13L19 29" stroke="#9b5de5" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">I.T. Dalla Chiesa</span>
+          <span class="nav-brand-sub">Informatica &amp; Telecomunicazioni</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Menu principale">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cosa-si-studia.html" class="nav-link">Cosa si studia</a>
+        <a href="laboratori.html" class="nav-link">Laboratori</a>
+        <a href="dopo-il-diploma.html" class="nav-link">Dopo il diploma</a>
+        <a href="challenge.html" class="nav-link nav-link-challenge active">⚡ Cyber Challenge</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER INTESTAZIONE DINAMICO -->
+    <section class="page-banner">
+      <div class="dynamic-bg" aria-hidden="true">
+        <div class="cyber-grid"></div>
+        <div class="glow-orb orb-purple"></div>
+        <div class="glow-orb orb-green"></div>
+      </div>
+
+      <div class="container page-banner-content">
+        <span class="section-badge" style="color:#d8bfff;background:var(--neon-purple-dim);border-color:rgba(155,93,229,0.45);">// Escape Room Informatica</span>
+        <h1 class="section-title">Cyber Challenge: <span class="gradient-text">4 Sfide per Futuri Maker</span></h1>
+        <p class="section-subtitle" style="max-width:720px;margin:0 auto;">
+          Risolvi ogni enigma per ottenere la <strong>Keyword segreta</strong> che sblocca il livello successivo. Completa tutti e 4 i livelli per ottenere il tuo Attestato Digitale!
+        </p>
+      </div>
+
+      <svg class="banner-wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,22 C360,48 1080,-4 1440,24 L1440,44 L0,44 Z" fill="#0a0e17"/>
+      </svg>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- CONSOLE DI PROGRESSO -->
+        <div class="progress-console">
+          <div class="progress-top">
+            <span style="color:var(--neon-cyan);">⚡ AVANZAMENTO MISSIONE</span>
+            <strong id="challengeProgressText" style="color:var(--neon-green);">0/4 — 0% Completati</strong>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar-fill" id="challengeProgressBar"></div>
+          </div>
+        </div>
+
+        <!-- ================================================================
+             LIVELLO 1 (FACILE): GIOCHIAMO CON I BIT
+             ================================================================ -->
+        <article class="challenge-level unlocked" id="level1Card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem;">
+            <span class="section-badge" style="margin-bottom:0;">Livello 01 • Difficoltà: Facile</span>
+            <span class="lab-badge">🔓 Sbloccato</span>
+          </div>
+
+          <h2 style="font-size:1.5rem;margin-bottom:0.65rem;">01 // Giochiamo con i Bit</h2>
+          <p style="color:var(--text-secondary);margin-bottom:1.25rem;">
+            I computer parlano solo con <strong>0</strong> e <strong>1</strong> (i bit!). Converti questi 4 numeri binari a 5 bit in numeri decimali sommando i pesi dove c'è l'1 (<strong>16 - 8 - 4 - 2 - 1</strong>) e poi trasforma ogni numero nella lettera corrispondente per scoprire la prima Keyword!
+          </p>
+
+          <div class="demo-widget" style="margin-bottom:1.25rem;">
+            <p style="font-family:var(--font-mono);font-size:0.86rem;color:var(--neon-cyan);margin-bottom:0.75rem;">
+              Tabella Aiuto: A=1 | B=2 | <strong>C=3</strong> | <strong>D=4</strong> | <strong>E=5</strong> | ... | <strong>O=15</strong>
+            </p>
+            <div class="grid-4" style="gap:0.75rem;text-align:center;">
+              <div style="background:#131a29;padding:0.75rem;border-radius:8px;border:1px solid var(--border-subtle);">
+                <span style="font-size:0.75rem;color:var(--text-muted);display:block;">1ª Lettera</span>
+                <strong class="mono" style="font-size:1.15rem;color:var(--neon-green);">00011</strong>
+                <span style="font-size:0.74rem;color:var(--text-secondary);display:block;">(2 + 1 = ?)</span>
+              </div>
+              <div style="background:#131a29;padding:0.75rem;border-radius:8px;border:1px solid var(--border-subtle);">
+                <span style="font-size:0.75rem;color:var(--text-muted);display:block;">2ª Lettera</span>
+                <strong class="mono" style="font-size:1.15rem;color:var(--neon-green);">01111</strong>
+                <span style="font-size:0.74rem;color:var(--text-secondary);display:block;">(8 + 4 + 2 + 1 = ?)</span>
+              </div>
+              <div style="background:#131a29;padding:0.75rem;border-radius:8px;border:1px solid var(--border-subtle);">
+                <span style="font-size:0.75rem;color:var(--text-muted);display:block;">3ª Lettera</span>
+                <strong class="mono" style="font-size:1.15rem;color:var(--neon-green);">00100</strong>
+                <span style="font-size:0.74rem;color:var(--text-secondary);display:block;">(4 = ?)</span>
+              </div>
+              <div style="background:#131a29;padding:0.75rem;border-radius:8px;border:1px solid var(--border-subtle);">
+                <span style="font-size:0.75rem;color:var(--text-muted);display:block;">4ª Lettera</span>
+                <strong class="mono" style="font-size:1.15rem;color:var(--neon-green);">00101</strong>
+                <span style="font-size:0.74rem;color:var(--text-secondary);display:block;">(4 + 1 = ?)</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;">
+            <input type="text" id="inputLevel1" class="cyber-input" style="max-width:260px;text-transform:uppercase;" placeholder="Scrivi la parola di 4 lettere...">
+            <button type="button" id="checkLevel1" class="btn btn-primary btn-sm">Verifica Risposta</button>
+          </div>
+          <p id="feedbackLevel1" style="margin-top:0.85rem;font-size:0.92rem;"></p>
+        </article>
+
+        <!-- ================================================================
+             LIVELLO 2 (FACILE/MEDIA): LOGICA BOOLEANA
+             ================================================================ -->
+        <article class="challenge-level locked" id="level2Card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem;">
+            <span class="section-badge" style="margin-bottom:0;">Livello 02 • Difficoltà: Facile / Media</span>
+            <span class="pill">🔒 Richiede Keyword Livello 1</span>
+          </div>
+
+          <h2 style="font-size:1.5rem;margin-bottom:0.65rem;">02 // Circuito di Logica Booleana</h2>
+
+          <!-- Box di sblocco -->
+          <div class="lock-banner" id="lockBox2">
+            <span style="font-family:var(--font-mono);font-size:0.88rem;color:#d8bfff;">🔐 Inserisci la Keyword del Livello 1 per sbloccare:</span>
+            <input type="text" id="keyInput2" class="cyber-input" style="max-width:210px;text-transform:uppercase;" placeholder="Keyword 1...">
+            <button type="button" id="unlockLevel2" class="btn btn-purple btn-sm">Sblocca Livello 2</button>
+            <span id="lockMsg2" style="color:var(--neon-red);font-size:0.84rem;width:100%;"></span>
+          </div>
+
+          <!-- Contenuto del Livello 2 (visibile dopo lo sblocco) -->
+          <div id="contentLevel2" style="display:none;margin-top:1rem;">
+            <p style="color:var(--text-secondary);margin-bottom:1rem;">
+              Dentro ogni microchip ci sono milioni di <strong>porte logiche</strong> (AND, OR, NOT). Per accendere il <strong>LED VERDE</strong> di questo circuito deve essere vera la formula:<br>
+              <code class="mono" style="color:var(--neon-cyan);font-size:1rem;">(Interruttore A = ON) AND (Interruttore B = OFF) AND (Interruttore C = ON)</code>
+            </p>
+
+            <div class="demo-widget">
+              <div class="logic-switches">
+                <button type="button" class="switch-btn" id="switchA" data-label="Interruttore A">Interruttore A: OFF (0)</button>
+                <button type="button" class="switch-btn" id="switchB" data-label="Interruttore B">Interruttore B: OFF (0)</button>
+                <button type="button" class="switch-btn" id="switchC" data-label="Interruttore C">Interruttore C: OFF (0)</button>
+                <div class="led-indicator" id="logicLed">LED VERDE: SPENTO (0)</div>
+              </div>
+              <p id="feedbackLevel2" style="margin-top:0.75rem;font-size:0.92rem;">Clicca sugli interruttori per impostare la combinazione giusta.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             LIVELLO 3 (MEDIA): MISSIONE CIFRARIO DI CESARE
+             ================================================================ -->
+        <article class="challenge-level locked" id="level3Card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem;">
+            <span class="section-badge" style="margin-bottom:0;">Livello 03 • Difficoltà: Media</span>
+            <span class="pill">🔒 Richiede Keyword Livello 2</span>
+          </div>
+
+          <h2 style="font-size:1.5rem;margin-bottom:0.65rem;">03 // Missione Cifrario di Cesare</h2>
+
+          <!-- Box di sblocco -->
+          <div class="lock-banner" id="lockBox3">
+            <span style="font-family:var(--font-mono);font-size:0.88rem;color:#d8bfff;">🔐 Inserisci la Keyword del Livello 2 per sbloccare:</span>
+            <input type="text" id="keyInput3" class="cyber-input" style="max-width:210px;text-transform:uppercase;" placeholder="Keyword 2...">
+            <button type="button" id="unlockLevel3" class="btn btn-purple btn-sm">Sblocca Livello 3</button>
+            <span id="lockMsg3" style="color:var(--neon-red);font-size:0.84rem;width:100%;"></span>
+          </div>
+
+          <!-- Contenuto del Livello 3 -->
+          <div id="contentLevel3" style="display:none;margin-top:1rem;">
+            <p style="color:var(--text-secondary);margin-bottom:1rem;">
+              Abbiamo intercettato un messaggio segreto cifrato con il celebre <strong>Cifrario di Cesare</strong> usando uno spostamento di <strong>3 lettere in avanti (K = 3)</strong>: <strong class="mono" style="color:var(--neon-amber);font-size:1.15rem;">FBDHU</strong>.<br>
+              Usa il simulatore del <strong>Disco di Cesare</strong> qui sotto per tornare indietro di 3 posizioni e leggere la parola originale!
+            </p>
+
+            <div class="demo-widget" style="margin-bottom:1.1rem;">
+              <label for="caesarShift" style="display:block;font-family:var(--font-mono);font-size:0.86rem;color:var(--neon-cyan);margin-bottom:0.5rem;">
+                🔄 Ruota il Disco di Cesare (Spostamento K = <strong id="caesarShiftVal">0</strong>)
+              </label>
+              <input type="range" id="caesarShift" min="0" max="10" value="0" style="width:100%;max-width:340px;accent-color:var(--neon-cyan);">
+              <p style="margin-top:0.75rem;font-family:var(--font-mono);">
+                Testo decifrato in tempo reale: <strong id="caesarDecodedPreview" style="font-size:1.3rem;color:var(--neon-green);letter-spacing:0.12em;">FBGHU</strong>
+              </p>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;">
+              <input type="text" id="inputLevel3" class="cyber-input" style="max-width:260px;text-transform:uppercase;" placeholder="Scrivi la parola decifrata...">
+              <button type="button" id="checkLevel3" class="btn btn-primary btn-sm">Verifica Messaggio</button>
+            </div>
+            <p id="feedbackLevel3" style="margin-top:0.85rem;font-size:0.92rem;"></p>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             LIVELLO 4 (MEDIA): ROUTER LAB (WAN VS LAN)
+             ================================================================ -->
+        <article class="challenge-level locked" id="level4Card">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem;">
+            <span class="section-badge" style="margin-bottom:0;">Livello 04 • Sfida Finale</span>
+            <span class="pill">🔒 Richiede Keyword Livello 3</span>
+          </div>
+
+          <h2 style="font-size:1.5rem;margin-bottom:0.65rem;">04 // Router Lab: Collega la Scuola a Internet</h2>
+
+          <!-- Box di sblocco -->
+          <div class="lock-banner" id="lockBox4">
+            <span style="font-family:var(--font-mono);font-size:0.88rem;color:#d8bfff;">🔐 Inserisci la Keyword del Livello 3 per sbloccare:</span>
+            <input type="text" id="keyInput4" class="cyber-input" style="max-width:210px;text-transform:uppercase;" placeholder="Keyword 3...">
+            <button type="button" id="unlockLevel4" class="btn btn-purple btn-sm">Sblocca Livello 4</button>
+            <span id="lockMsg4" style="color:var(--neon-red);font-size:0.84rem;width:100%;"></span>
+          </div>
+
+          <!-- Contenuto del Livello 4 -->
+          <div id="contentLevel4" style="display:none;margin-top:1rem;">
+            <p style="color:var(--text-secondary);margin-bottom:1.1rem;">
+              Il laboratorio di Informatica è pronto, ma il cavo in fibra ottica che arriva dal provider Internet esterno è scollegato! Su quale porta del Router devi inserirlo per dare connessione a tutta la rete della scuola?
+            </p>
+
+            <div class="demo-widget" style="margin-bottom:1.1rem;">
+              <!-- Illustrazione SVG Router -->
+              <svg viewBox="0 0 460 110" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:460px;margin-bottom:1rem;" aria-label="Schema porte router WAN e LAN">
+                <rect x="10" y="20" width="440" height="70" rx="12" fill="#131b2b" stroke="#00f5d4" stroke-width="2"/>
+                <rect x="35" y="40" width="85" height="32" rx="6" fill="#0b101b" stroke="#00ff88" stroke-width="2"/>
+                <text x="77" y="60" fill="#00ff88" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">PORTA WAN</text>
+
+                <rect x="155" y="40" width="75" height="32" rx="6" fill="#0b101b" stroke="#9b5de5" stroke-width="1.8"/>
+                <text x="192" y="60" fill="#cdd9e5" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">LAN 1</text>
+
+                <rect x="245" y="40" width="75" height="32" rx="6" fill="#0b101b" stroke="#9b5de5" stroke-width="1.8"/>
+                <text x="282" y="60" fill="#cdd9e5" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">LAN 2</text>
+
+                <rect x="335" y="40" width="75" height="32" rx="6" fill="#0b101b" stroke="#9b5de5" stroke-width="1.8"/>
+                <text x="372" y="60" fill="#cdd9e5" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">LAN 3</text>
+              </svg>
+
+              <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;">
+                <select id="routerPortSelect" class="cyber-select" style="max-width:300px;">
+                  <option value="">-- Seleziona la porta del Router --</option>
+                  <option value="LAN">Porta LAN (Local Area Network)</option>
+                  <option value="WAN">Porta WAN (Wide Area Network)</option>
+                </select>
+                <button type="button" id="checkLevel4" class="btn btn-primary btn-sm">Collega Cavo &amp; Completa</button>
+              </div>
+            </div>
+
+            <p id="feedbackLevel4" style="margin-top:0.75rem;font-size:0.92rem;"></p>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             SCHERMATA FINALE DI VITTORIA: ATTESTATO DIGITALE PERSONALIZZABILE
+             ================================================================ -->
+        <section class="certificate-card" id="finalCertificate" aria-live="polite">
+          <!-- Badge SVG di completamento -->
+          <svg width="78" height="78" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 1rem;" aria-hidden="true">
+            <circle cx="40" cy="40" r="36" fill="#132232" stroke="#00ff88" stroke-width="3"/>
+            <path d="M26 41L36 51L55 30" stroke="#00f5d4" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          <span class="section-badge" style="color:var(--neon-green);background:var(--neon-green-dim);">🏆 Missione Completata — 4/4 Livelli</span>
+          <h2 style="font-size:1.85rem;margin-bottom:0.5rem;">Complimenti! Hai superato la Cyber Challenge!</h2>
+          <p style="color:var(--text-secondary);max-width:560px;margin:0 auto 1.25rem;">
+            Scrivi qui sotto il tuo nome e cognome per personalizzare subito il tuo Attestato Digitale ufficiale:
+          </p>
+
+          <input type="text" id="certNameInput" class="cyber-input" style="max-width:360px;text-align:center;margin:0 auto 1.25rem;display:block;" placeholder="Scrivi il tuo Nome e Cognome...">
+
+          <div class="certificate-frame">
+            <p style="font-family:var(--font-mono);font-size:0.82rem;color:var(--neon-cyan);letter-spacing:0.1em;text-transform:uppercase;">
+              Istituto Tecnico "Carlo Alberto Dalla Chiesa" — Partinico (PA)
+            </p>
+            <h3 style="font-size:1.35rem;margin-top:0.4rem;">ATTESTATO DI JUNIOR CYBER EXPLORER</h3>
+            <p style="color:var(--text-secondary);font-size:0.92rem;margin-top:0.5rem;">Conferito ufficialmente a</p>
+            <div class="cert-student-name" id="certNameDisplay">IL TUO NOME E COGNOME</div>
+            <p style="color:var(--text-secondary);font-size:0.92rem;max-width:540px;margin:0.5rem auto 1rem;">
+              Per aver completato con successo tutte le prove di logica binaria, porte logiche, crittografia e reti dell'indirizzo <strong>Informatica e Telecomunicazioni</strong>.
+            </p>
+            <span class="pill" style="color:var(--neon-green);border-color:rgba(0,255,136,0.4);">Codice Vittoria: HACKER2026</span>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns: 1.3fr 0.9fr 1.1fr 0.85fr;">
+        <div>
+          <h3 class="footer-title">I.T. "Carlo Alberto Dalla Chiesa"</h3>
+          <p class="footer-desc">
+            Indirizzo Tecnico Tecnologico — <strong>Informatica e Telecomunicazioni</strong>.<br>
+            Partinico (PA) • Formiamo i progettisti, gli sviluppatori e gli innovatori digitali di domani.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Esplora il Sito</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="cosa-si-studia.html">Quadro Orario e Materie</a></li>
+            <li><a href="laboratori.html">Laboratori e Progetti</a></li>
+            <li><a href="dopo-il-diploma.html">Università e Lavoro</a></li>
+            
+            <li><a href="challenge.html">Cyber Challenge</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Canali Ufficiali Scuola</h4>
+          <div class="social-links">
+            <a href="https://www.itdallachiesa.it/index-2.html" class="social-pill" target="_blank" rel="noopener noreferrer">🌐 Sito Ufficiale</a>
+            <a href="https://www.facebook.com/ItCarloAlbertoDallaChiesaPartinico/?locale=it_IT" class="social-pill" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+            <a href="https://www.instagram.com/it.dallachiesa/" class="social-pill" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+            <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2F%40itdallachiesapartinico%2Fvideo%2F7548512214399847702&lang=en&enter_method=mandatory" class="social-pill" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+            <a href="https://www.youtube.com/channel/UC1bS_AZvCFSDUAT5_xX4-SQ" class="social-pill" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <h4 class="footer-title">Apri sul tuo Smartphone</h4>
+          <div style="background:#ffffff;padding:8px;border-radius:10px;display:inline-block;border:2px solid var(--neon-cyan);box-shadow:0 0 15px rgba(0,245,212,0.2);">
+            <img class="footer-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&margin=2&data=https%3A%2F%2Fwww.itdallachiesa.it%2Findex-2.html" alt="QR Code per aprire questa pagina su smartphone" width="112" height="112" style="display:block;">
+          </div>
+          <span style="display:block;font-family:var(--font-mono);font-size:0.72rem;color:var(--neon-cyan);margin-top:0.45rem;">Inquadra</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 I.T. "Carlo Alberto Dalla Chiesa" — Partinico (PA). Sito di Orientamento Scolastico.</span>
+        <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina">
+          <span>↑ Torna in cima</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>

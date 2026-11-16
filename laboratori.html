@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratori &amp; Progetti Studenti | I.T. Dalla Chiesa - Partinico</title>
+  <meta name="description" content="Visita i 4 laboratori di Informatica e Telecomunicazioni dell'IT Dalla Chiesa di Partinico e scopri i videogiochi Pygame e i robot mBot2 creati dagli studenti.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR STICKY CONDIVISA -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Homepage IT Dalla Chiesa Partinico">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="38" height="38" rx="10" fill="#111927" stroke="#00f5d4" stroke-width="2"/>
+          <path d="M14 15L9 21L14 27" stroke="#00f5d4" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 15L33 21L28 27" stroke="#00ff88" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23 13L19 29" stroke="#9b5de5" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">I.T. Dalla Chiesa</span>
+          <span class="nav-brand-sub">Informatica &amp; Telecomunicazioni</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Apri menu di navigazione" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Menu principale">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="cosa-si-studia.html" class="nav-link">Cosa si studia</a>
+        <a href="laboratori.html" class="nav-link active">Laboratori</a>
+        <a href="dopo-il-diploma.html" class="nav-link">Dopo il diploma</a>
+        <a href="challenge.html" class="nav-link nav-link-challenge">⚡ Cyber Challenge</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER INTESTAZIONE DINAMICO -->
+    <section class="page-banner">
+      <div class="dynamic-bg" aria-hidden="true">
+        <div class="cyber-grid"></div>
+        <div class="glow-orb orb-green"></div>
+        <div class="glow-orb orb-cyan"></div>
+      </div>
+
+      <div class="container page-banner-content">
+        <span class="section-badge">// Imparare Facendo</span>
+        <h1 class="section-title">I Nostri <span class="gradient-text">4 Laboratori</span> &amp; i Progetti degli Studenti</h1>
+        <p class="section-subtitle" style="max-width:720px;margin:0 auto;">
+          Al "Dalla Chiesa" non si impara a programmare solo su un libro: hai a disposizione quattro laboratori attrezzati dove progettare software, reti, circuiti e robot.
+        </p>
+      </div>
+
+      <svg class="banner-wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,22 C360,48 1080,-4 1440,24 L1440,44 L0,44 Z" fill="#0a0e17"/>
+      </svg>
+    </section>
+
+    <!-- SEZIONE 1: I 4 LABORATORI DELL'ISTITUTO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">// Spazi Tecnologici</span>
+          <h2 class="section-title">Dove Nascono le Idee</h2>
+          <p class="section-subtitle">
+            Ogni laboratorio è dedicato a un ambito specifico dell'Informatica e delle Telecomunicazioni.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Laboratorio 1 -->
+          <article class="card">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+              <div class="card-icon" style="margin-bottom:0;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
+                </svg>
+              </div>
+              <div>
+                <span class="lab-badge">LAB 01</span>
+                <h3 style="margin-top:0.25rem;">Laboratorio di Programmazione</h3>
+              </div>
+            </div>
+            <p style="margin-bottom:1.15rem;">
+              Postazioni PC moderne con ambienti di sviluppo professionali (IDE) per scrivere codice in Python, C++, Java, HTML/CSS/JS e gestire database in team.
+            </p>
+            <!-- FOTO_LAB_PROGRAMMAZIONE: Inserire foto reale del Laboratorio di Programmazione (dimensioni consigliate: 800x500px) -->
+            <div class="photo-placeholder">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <path d="M21 15l-5-5L5 21"/>
+              </svg>
+              <strong>Foto Laboratorio di Programmazione</strong>
+              <span>Dimensioni consigliate: 800 × 500 px</span>
+            </div>
+          </article>
+
+          <!-- Laboratorio 2 -->
+          <article class="card">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+              <div class="card-icon green" style="margin-bottom:0;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M2 12h4l3-9 6 18 3-9h4"/>
+                </svg>
+              </div>
+              <div>
+                <span class="lab-badge">LAB 02</span>
+                <h3 style="margin-top:0.25rem;">Laboratorio di Telecomunicazioni</h3>
+              </div>
+            </div>
+            <p style="margin-bottom:1.15rem;">
+              Spazio attrezzato con oscilloscopi, generatori di segnali, breadboard e strumentazione elettronica per studiare onde radio, circuiti, fibra ottica e trasmissione dati.
+            </p>
+            <!-- FOTO_LAB_TELECOMUNICAZIONI: Inserire foto reale del Laboratorio di Telecomunicazioni (dimensioni consigliate: 800x500px) -->
+            <div class="photo-placeholder">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <path d="M21 15l-5-5L5 21"/>
+              </svg>
+              <strong>Foto Laboratorio di Telecomunicazioni</strong>
+              <span>Dimensioni consigliate: 800 × 500 px</span>
+            </div>
+          </article>
+
+          <!-- Laboratorio 3 -->
+          <article class="card">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+              <div class="card-icon purple" style="margin-bottom:0;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="8" width="16" height="12" rx="3"/>
+                  <path d="M12 2v6M9 13h.01M15 13h.01M9 17h6"/>
+                </svg>
+              </div>
+              <div>
+                <span class="lab-badge">LAB 03</span>
+                <h3 style="margin-top:0.25rem;">Laboratorio di Robotica</h3>
+              </div>
+            </div>
+            <p style="margin-bottom:1.15rem;">
+              Kit robotici mBot2, microcontrollori, sensori a ultrasuoni, motori e attuatori per progettare prototipi intelligenti capaci di interagire con l'ambiente.
+            </p>
+            <!-- FOTO_LAB_ROBOTICA: Inserire foto reale del Laboratorio di Robotica (dimensioni consigliate: 800x500px) -->
+            <div class="photo-placeholder">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <path d="M21 15l-5-5L5 21"/>
+              </svg>
+              <strong>Foto Laboratorio di Robotica</strong>
+              <span>Dimensioni consigliate: 800 × 500 px</span>
+            </div>
+          </article>
+
+          <!-- Laboratorio 4 -->
+          <article class="card">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+              <div class="card-icon" style="margin-bottom:0;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="6" cy="6" r="3"/>
+                  <circle cx="18" cy="6" r="3"/>
+                  <circle cx="12" cy="18" r="3"/>
+                  <path d="M8.5 7.5L10.5 15.5M15.5 7.5L13.5 15.5"/>
+                </svg>
+              </div>
+              <div>
+                <span class="lab-badge">LAB 04</span>
+                <h3 style="margin-top:0.25rem;">Sistemi e Reti con Cisco Packet Tracer</h3>
+              </div>
+            </div>
+            <p style="margin-bottom:1.15rem;">
+              Simulazione di reti aziendali complesse con Cisco Packet Tracer e apparati reali: configurazione di router, switch, VLAN, server e regole di sicurezza firewall.
+            </p>
+            <!-- FOTO_LAB_RETI_CISCO: Inserire foto reale del Laboratorio Sistemi e Reti (dimensioni consigliate: 800x500px) -->
+            <div class="photo-placeholder">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <path d="M21 15l-5-5L5 21"/>
+              </svg>
+              <strong>Foto Laboratorio Sistemi &amp; Reti (Cisco)</strong>
+              <span>Dimensioni consigliate: 800 × 500 px</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 2: VETRINA "MADE BY STUDENTS" -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">// Made by Students</span>
+          <h2 class="section-title">I Progetti dei Nostri Ragazzi</h2>
+          <p class="section-subtitle">
+            Dai videogiochi sviluppati in Python ai robot autonomi mBot2: ecco cosa riescono a creare gli studenti dell'IT Dalla Chiesa.
+          </p>
+        </div>
+
+        <!-- Filtri Categoria -->
+        <div class="filter-bar" role="group" aria-label="Filtra progetti per categoria">
+          <button class="tab-btn active" data-project-filter="all">Tutti i Progetti</button>
+          <button class="tab-btn" data-project-filter="pygame">🎮 Videogiochi Pygame</button>
+          <button class="tab-btn" data-project-filter="robotica">🤖 Robotica mBot2</button>
+        </div>
+
+        <!-- Griglia Progetti (Per aggiungere un nuovo progetto, duplica un blocco <article class="card project-card"> e aggiorna script.js) -->
+        <div class="grid-2">
+          <!-- PROGETTO 1: Videogioco Pygame -->
+          <article class="card project-card" data-project-cat="pygame">
+            <div>
+              <!-- FOTO_PROGETTO_1: Inserire screenshot o GIF del videogioco Cyber Space Defender (dimensioni consigliate: 800x450px) -->
+              <div class="photo-placeholder" style="min-height:170px;">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <rect x="2" y="6" width="20" height="12" rx="4"/>
+                  <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+                </svg>
+                <strong>Screenshot / GIF — Cyber Space Defender</strong>
+                <span>Dimensioni consigliate: 800 × 450 px</span>
+              </div>
+
+              <span class="project-tag pygame">Python / Pygame</span>
+              <h3>Cyber Space Defender</h3>
+              <p>
+                Arcade spaziale 2D in cui piloti una navicella difensiva per schivare meteoriti e intercettare pacchetti dati infetti prima che colpiscano il server.
+              </p>
+            </div>
+
+            <div>
+              <p class="project-meta">Autori: Studenti 3ª B Informatica • A.S. 2024/2025</p>
+              <button type="button" class="btn btn-secondary btn-sm" style="width:100%;" data-open-project="proj1">
+                🔍 Dettagli / Anteprima
+              </button>
+            </div>
+          </article>
+
+          <!-- PROGETTO 2: Robotica mBot2 -->
+          <article class="card project-card" data-project-cat="robotica">
+            <div>
+              <!-- FOTO_PROGETTO_2: Inserire foto o GIF del robot RoboMaze Explorer (dimensioni consigliate: 800x450px) -->
+              <div class="photo-placeholder" style="min-height:170px;">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <rect x="4" y="8" width="16" height="12" rx="3"/>
+                  <path d="M12 2v6M9 13h.01M15 13h.01"/>
+                </svg>
+                <strong>Foto / GIF — RoboMaze Explorer</strong>
+                <span>Dimensioni consigliate: 800 × 450 px</span>
+              </div>
+
+              <span class="project-tag">mBot2 / Robotica</span>
+              <h3>RoboMaze Explorer</h3>
+              <p>
+                Robot autonomo basato su scheda CyberPi e sensori a ultrasuoni in grado di esplorare un labirinto e trovare l'uscita evitando gli ostacoli.
+              </p>
+            </div>
+
+            <div>
+              <p class="project-meta">Autori: Studenti 3ª A e 4ª A • A.S. 2024/2025</p>
+              <button type="button" class="btn btn-secondary btn-sm" style="width:100%;" data-open-project="proj2">
+                🔍 Dettagli / Anteprima
+              </button>
+            </div>
+          </article>
+
+          <!-- PROGETTO 3: Videogioco Pygame -->
+          <article class="card project-card" data-project-cat="pygame">
+            <div>
+              <!-- FOTO_PROGETTO_3: Inserire screenshot o GIF di Pixel Escape: Dalla Chiesa Edition (dimensioni consigliate: 800x450px) -->
+              <div class="photo-placeholder" style="min-height:170px;">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <rect x="2" y="6" width="20" height="12" rx="4"/>
+                  <path d="M6 12h4M8 10v4M15 11h.01M18 13h.01"/>
+                </svg>
+                <strong>Screenshot / GIF — Pixel Escape</strong>
+                <span>Dimensioni consigliate: 800 × 450 px</span>
+              </div>
+
+              <span class="project-tag pygame">Python / Pygame</span>
+              <h3>Pixel Escape: Dalla Chiesa Edition</h3>
+              <p>
+                Gioco platform ambientato nei corridoi e nei laboratori della scuola: raccogli i bit di energia, evita i bug e sblocca tutte le porte logiche.
+              </p>
+            </div>
+
+            <div>
+              <p class="project-meta">Autori: Studenti 4ª B Informatica • A.S. 2025/2026</p>
+              <button type="button" class="btn btn-secondary btn-sm" style="width:100%;" data-open-project="proj3">
+                🔍 Dettagli / Anteprima
+              </button>
+            </div>
+          </article>
+
+          <!-- PROGETTO 4: Robotica mBot2 -->
+          <article class="card project-card" data-project-cat="robotica">
+            <div>
+              <!-- FOTO_PROGETTO_4: Inserire foto o GIF di Smart Line & Color Sorter (dimensioni consigliate: 800x450px) -->
+              <div class="photo-placeholder" style="min-height:170px;">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <rect x="4" y="8" width="16" height="12" rx="3"/>
+                  <path d="M12 2v6M9 13h.01M15 13h.01"/>
+                </svg>
+                <strong>Foto / GIF — Smart Line &amp; Color Sorter</strong>
+                <span>Dimensioni consigliate: 800 × 450 px</span>
+              </div>
+
+              <span class="project-tag">mBot2 / Robotica</span>
+              <h3>Smart Line &amp; Color Sorter</h3>
+              <p>
+                Rover intelligente che segue un percorso su pista grazie ai sensori ottici RGB, riconosce il colore dei blocchi e li smista automaticamente.
+              </p>
+            </div>
+
+            <div>
+              <p class="project-meta">Autori: Studenti 3ª B • A.S. 2025/2026</p>
+              <button type="button" class="btn btn-secondary btn-sm" style="width:100%;" data-open-project="proj4">
+                🔍 Dettagli / Anteprima
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALE ANTEPRIMA PROGETTO -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjTitle">
+    <div class="modal-box">
+      <button type="button" class="modal-close" id="closeProjectModal" aria-label="Chiudi finestra dettagli">✕</button>
+      <span class="section-badge" id="modalProjTag">Python / Pygame</span>
+      <h3 id="modalProjTitle" style="font-size:1.5rem;margin-bottom:0.4rem;">Titolo Progetto</h3>
+      <p id="modalProjAuthors" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--neon-cyan);margin-bottom:1rem;"></p>
+      <p id="modalProjDesc" style="color:var(--text-secondary);margin-bottom:1.2rem;"></p>
+      <div style="background:#0b0f18;border:1px solid var(--border-subtle);border-radius:10px;padding:1rem;">
+        <strong style="font-family:var(--font-mono);font-size:0.82rem;color:var(--neon-green);display:block;margin-bottom:0.35rem;">
+          // Tecnologie e Competenze Usate
+        </strong>
+        <p id="modalProjTech" style="font-size:0.9rem;color:var(--text-primary);"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER CONDIVISO -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns: 1.3fr 0.9fr 1.1fr 0.85fr;">
+        <div>
+          <h3 class="footer-title">I.T. "Carlo Alberto Dalla Chiesa"</h3>
+          <p class="footer-desc">
+            Indirizzo Tecnico Tecnologico — <strong>Informatica e Telecomunicazioni</strong>.<br>
+            Partinico (PA) • Formiamo i progettisti, gli sviluppatori e gli innovatori digitali di domani.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Esplora il Sito</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="cosa-si-studia.html">Quadro Orario e Materie</a></li>
+            <li><a href="laboratori.html">Laboratori e Progetti</a></li>
+            <li><a href="dopo-il-diploma.html">Università e Lavoro</a></li>
+            
+            <li><a href="challenge.html">Cyber Challenge</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Canali Ufficiali Scuola</h4>
+          <div class="social-links">
+            <a href="https://www.itdallachiesa.it/index-2.html" class="social-pill" target="_blank" rel="noopener noreferrer">🌐 Sito Ufficiale</a>
+            <a href="https://www.facebook.com/ItCarloAlbertoDallaChiesaPartinico/?locale=it_IT" class="social-pill" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+            <a href="https://www.instagram.com/it.dallachiesa/" class="social-pill" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+            <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2F%40itdallachiesapartinico%2Fvideo%2F7548512214399847702&lang=en&enter_method=mandatory" class="social-pill" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+            <a href="https://www.youtube.com/channel/UC1bS_AZvCFSDUAT5_xX4-SQ" class="social-pill" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <h4 class="footer-title">Apri sul tuo Smartphone</h4>
+          <div style="background:#ffffff;padding:8px;border-radius:10px;display:inline-block;border:2px solid var(--neon-cyan);box-shadow:0 0 15px rgba(0,245,212,0.2);">
+            <img class="footer-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&margin=2&data=https%3A%2F%2Fwww.itdallachiesa.it%2Findex-2.html" alt="QR Code per aprire questa pagina su smartphone" width="112" height="112" style="display:block;">
+          </div>
+          <span style="display:block;font-family:var(--font-mono);font-size:0.72rem;color:var(--neon-cyan);margin-top:0.45rem;">Inquadra</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 I.T. "Carlo Alberto Dalla Chiesa" — Partinico (PA). Sito di Orientamento Scolastico.</span>
+        <button class="back-to-top" id="backToTop" aria-label="Torna in cima alla pagina">
+          <span>↑ Torna in cima</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>
