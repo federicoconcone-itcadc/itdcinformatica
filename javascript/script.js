@@ -178,7 +178,7 @@ const CURRICULUM_DATA = {
       { name: 'Progettazione Sistemi Informatici (TPSIT)', hours: 4, lab: 4 },
       { name: 'Sistemi e Reti', hours: 4, lab: 3 },
       { name: 'Informatica', hours: 6, lab: 3 },
-      { name: 'Economia Aziendale e organizzazione d’impresa', hours: 3, lab: 0 },
+      { name: 'Gestione Progetto e Organizzazione Impresa', hours: 3, lab: 0 },
       { name: 'Scienze motorie e sportive', hours: 2, lab: 0 },
       { name: 'Religione cattolica o attività alternative', hours: 1, lab: 0 }
     ]
